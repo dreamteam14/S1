@@ -84,26 +84,33 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭─「 ${conn.user.name} 」
-│ Hai, %name!
-│
-│ Tersisa *%limit Limit*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+╭────ꕥ *INFO BOT* ꕥ────────✾
+│❒ Sc Ori By : Narutomo
+│❒ Record : David
+│❒ Wa.Version : 4.1.1
+│❒ Merk Hp : Realme
+│❒ Versi Hp : 5.1
+╰───────────────────✾
+
+╭────────────✾
+│❒ Nama : *%name*
+│❒ Exp : *%exp XP*
+│❒ Limit :  *%limit Limit*
+│❒ Hari : *%week*
+│❒ Weton : *%weton*
+│❒ Tanggal : *%date*
+│❒ Waktu : *%time*
+│❒ Online : *%uptime*
+│❒ Total User : *%totalreg User*
+│❒ Prefix : *#*
+╰───────────────────✾
+
+*NB* : Aing Cuma Pakek Nih Sc Jadi Jan Di Buly
+*NB* : Eror? Laporr Ajg
 %readmore`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│ • %cmd%islimit'
-    let footer = conn.menu.footer || '╰────\n'
+    let header = conn.menu.header || '╭────ꕥ %category ꕥ────────✾'
+    let body   = conn.menu.body   || '│❒ %cmd%islimit'
+    let footer = conn.menu.footer || '╰───────────────────✾\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
