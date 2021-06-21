@@ -1,7 +1,7 @@
 {
-  "name": "wabot-aq",
+  "name": "Whatsapp Bot",
   "version": "2.1.0",
-  "description": "Customizable WhatsApp Bot",
+  "description": "By : Narutomo",
   "depecrated": false,
   "main": "index.js",
   "directories": {
