@@ -40,23 +40,23 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let tags = {
-      'main': 'Main',
-      'game': 'Game',
-      'xp': 'Exp & Limit',
-      'sticker': 'Sticker',
-      'kerang': 'Kerang Ajaib',
+      'main': 'START BOT',
+      'game': 'Game Menu',
+      'xp': 'Menu Menggunakan Limit',
+      'sticker': 'Comveter',
+      'kerang': 'Gabut Menu',
       'quotes': 'Quotes',
-      'admin': 'Admin',
-      'group': 'Group',
-      'premium': 'Premium',
+      'admin': 'Menu Admin Group',
+      'group': 'Menu Group',
+      'premium': 'Premium Menu',
       'internet': 'Internet',
       'anonymous': 'Anonymous Chat',
       'nulis': 'MagerNulis & Logo',
-      'downloader': 'Downloader',
+      'downloader': 'Downloader Menu',
       'tools': 'Tools',
       'fun': 'Fun',
       'database': 'Database',
-      'jadibot': 'Jadi Bot',
+      'jadibot': 'Menu Premium',
       'owner': 'Owner',
       'host': 'Host',
       'advanced': 'Advanced',
@@ -108,9 +108,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *NB* : Aing Cuma Pakek Nih Sc Jadi Jan Di Buly
 *NB* : Eror? Laporr Ajg
 %readmore`
-    let header = conn.menu.header || '╭────ꕥ %category ꕥ────────✾'
+    let header = conn.menu.header || '╭────ꕥ %category ꕥ─────✾'
     let body   = conn.menu.body   || '│❒ %cmd%islimit'
-    let footer = conn.menu.footer || '╰───────────────────✾\n'
+    let footer = conn.menu.footer || '╰─────────────✾\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
